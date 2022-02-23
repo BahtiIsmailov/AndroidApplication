@@ -3,7 +3,8 @@ My big Project in Education Sphere
 Stack:
 - Kotlin
 - ViewPager2
-- Work with Animation (class ValueAnimator)
+- Work with Animation 
+- ResultWrapper
 - Coroutines
 - Android SDK(view Components)
 - Creat Custom View component
@@ -20,3 +21,5 @@ Stack:
 - Review of pool requests;
 - Network protocols HTTP/RESTFULL APIs
 - MVVM template architecture
+- and many little libraries
+
