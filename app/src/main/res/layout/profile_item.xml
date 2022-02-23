@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="139dp"
+    android:orientation="horizontal"
+    app:cardCornerRadius="16dp"
+    android:layout_marginBottom="11dp"
+    app:cardPreventCornerOverlap="true"
+    app:rippleColor="@android:color/transparent"
+    app:strokeColor="#B2DFDDDD"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageChooseProfile"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_radio_button_unchecked_24" />
+
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Uncommon"
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="-10dp"
+            android:background="@drawable/name_style"
+            android:fontFamily="@font/proxima_soft_semi_bold"
+            android:gravity="center"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/imageProfile"
+            app:layout_constraintStart_toStartOf="@id/imageProfile"
+            app:layout_constraintTop_toBottomOf="@id/imageProfile" />
+
+
+        <TextView
+            android:id="@+id/Reshetka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/proxima_soft_semi_bold"
+            android:text="TextView"
+            android:textColor="#C6C5C5"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageProfile"
+            app:layout_constraintTop_toTopOf="@+id/imageChooseProfile" />
+
+
+        <TextView
+            android:id="@+id/NickNameProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/proxima_soft_bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/Reshetka"
+            app:layout_constraintTop_toBottomOf="@+id/Reshetka"
+            tools:text="TextView TextView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/numberLevelProfileGreenconstrain"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/background_level_green"
+            app:layout_constraintStart_toStartOf="@+id/NickNameProfile"
+            app:layout_constraintTop_toBottomOf="@+id/NickNameProfile">
+
+            <TextView
+                android:id="@+id/numberLevelProfileGreen"
+                style="@style/Proxima19Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="55" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintMolnia"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background_energy_selector"
+            app:layout_constraintStart_toEndOf="@+id/numberLevelProfileGreenconstrain"
+            app:layout_constraintTop_toBottomOf="@+id/NickNameProfile">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_path1818"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/numberMolnia"
+                style="@style/Proxima21Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="100" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/visa_days_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="12dp"
+            android:progress="50"
+            android:progressDrawable="@drawable/visa_progressbar_item"
+            app:layout_constraintStart_toStartOf="@+id/numberLevelProfileGreenconstrain"
+            app:layout_constraintTop_toBottomOf="@+id/numberLevelProfileGreenconstrain"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="34dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/howManyDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/visa_days_progressbar"
+            app:layout_constraintStart_toStartOf="@id/visa_days_progressbar"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

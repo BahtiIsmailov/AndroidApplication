@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <style name="ProximaSoftBold" parent="Text">
+        <item name="android:fontFamily">@font/proxima_soft_bold</item>
+        <item name="fontFamily">@font/proxima_soft_bold</item>
+    </style>
+
+    <style name="NexaExtraBold" parent="Text">
+        <item name="android:fontFamily">@font/nexa_text_extra_bold</item>
+        <item name="fontFamily">@font/nexa_text_extra_bold</item>
+    </style>
+
+    <style name="NexaRegular" parent="Text">
+        <item name="android:fontFamily">@font/nexa_text_regular</item>
+        <item name="fontFamily">@font/nexa_text_regular</item>
+    </style>
+
+    <style name="ProximaSoftSemiBold" parent="Text">
+        <item name="android:fontFamily">@font/proxima_soft_semi_bold</item>
+        <item name="fontFamily">@font/proxima_soft_semi_bold</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ProximaSoftMedium" parent="Text">
+        <item name="android:fontFamily">@font/proxima_soft_medium</item>
+        <item name="fontFamily">@font/proxima_soft_medium</item>
+    </style>
+
+    <style name="ProximaSoftRegular" parent="Text">
+        <item name="android:fontFamily">@font/proxima_soft_regular</item>
+        <item name="fontFamily">@font/proxima_soft_regular</item>
+    </style>
+
+    <style name="Proxima12Bold" parent="ProximaSoftBold">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">14sp</item>
+    </style>
+
+    <style name="Proxima12SemiBold" parent="ProximaSoftSemiBold">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">14sp</item>
+    </style>
+
+    <style name="Proxima12" parent="ProximaSoftRegular">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">14sp</item>
+    </style>
+
+    <style name="Proxima48Bold" parent="ProximaSoftBold">
+        <item name="android:textSize">48sp</item>
+        <item name="lineHeight">48sp</item>
+    </style>
+
+    <style name="Proxima9" parent="ProximaSoftRegular">
+        <item name="android:textSize">9sp</item>
+        <item name="lineHeight">11sp</item>
+    </style>
+
+    <style name="Proxima10Bold" parent="ProximaSoftBold">
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">12sp</item>
+    </style>
+
+    <style name="Proxima15SemiBold" parent="ProximaSoftSemiBold">
+        <item name="android:textSize">15sp</item>
+        <item name="lineHeight">17sp</item>
+    </style>
+
+    <style name="Proxima15" parent="ProximaSoftRegular">
+        <item name="android:textSize">15sp</item>
+        <item name="lineHeight">17sp</item>
+    </style>
+
+    <style name="Proxima17Bold" parent="ProximaSoftBold">
+        <item name="android:textSize">17sp</item>
+        <item name="lineHeight">19sp</item>
+    </style>
+
+    <style name="Proxima19Bold" parent="ProximaSoftBold">
+        <item name="android:textSize">19sp</item>
+        <item name="lineHeight">21sp</item>
+    </style>
+
+    <style name="Proxima19Medium" parent="ProximaSoftMedium">
+        <item name="android:textSize">19sp</item>
+        <item name="lineHeight">21sp</item>
+    </style>
+
+    <style name="Proxima17Medium" parent="ProximaSoftMedium">
+        <item name="android:textSize">17sp</item>
+        <item name="lineHeight">19sp</item>
+    </style>
+
+    <style name="Proxima25Bold" parent="ProximaSoftBold">
+        <item name="android:textSize">25sp</item>
+        <item name="lineHeight">27sp</item>
+    </style>
+
+    <style name="Proxima21Bold" parent="ProximaSoftBold">
+        <item name="android:textSize">21sp</item>
+        <item name="lineHeight">23sp</item>
+    </style>
+
+    <style name="Proxima21SemiBold" parent="ProximaSoftSemiBold">
+        <item name="android:textSize">21sp</item>
+        <item name="lineHeight">23sp</item>
+    </style>
+
+    <style name="Proxima22Bold" parent="ProximaSoftBold">
+        <item name="android:textSize">22sp</item>
+        <item name="lineHeight">27sp</item>
+    </style>
+
+    <style name="Proxima23Bold" parent="ProximaSoftBold">
+        <item name="android:textSize">23sp</item>
+        <item name="lineHeight">27sp</item>
+    </style>
+
+    <style name="Proxima34Bold" parent="ProximaSoftBold">
+        <item name="android:textSize">34sp</item>
+        <item name="lineHeight">36sp</item>
+    </style>
+
+    <style name="Proxima70Bold" parent="ProximaSoftBold">
+        <item name="android:textSize">70sp</item>
+        <item name="lineHeight">36sp</item>
+    </style>
+
+    <style name="Text25Bold" parent="NexaExtraBold">
+        <item name="android:textSize">25sp</item>
+        <item name="lineHeight">28sp</item>
+    </style>
+
+    <style name="Text19Bold" parent="NexaExtraBold">
+        <item name="android:textSize">19sp</item>
+        <item name="lineHeight">21sp</item>
+    </style>
+
+    <style name="Text15" parent="NexaRegular">
+        <item name="android:textSize">15sp</item>
+        <item name="lineHeight">17sp</item>
+    </style>
+
+    <style name="Text12Bold" parent="NexaExtraBold">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">13sp</item>
+    </style>
+
+    <style name="Text12" parent="NexaRegular">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">13sp</item>
+    </style>
+
+</resources>

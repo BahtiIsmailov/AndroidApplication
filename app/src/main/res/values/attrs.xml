@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SeekArc">
+        <attr name="thumb" format="reference" />
+        <attr name="thumbOffset" format="dimension" />
+        <attr name="max" format="integer" />
+        <attr name="progressWidth" format="dimension" />
+        <attr name="arcWidth" format="dimension" />
+        <attr name="progress" format="integer" />
+        <attr name="rotation" format="integer" />
+        <attr name="startAngle" format="integer" />
+        <attr name="sweepAngle" format="integer" />
+        <attr name="arcColor" format="color" />
+        <attr name="progressColor" format="color" />
+        <attr name="roundEdges" format="boolean" />
+        <attr name="touchInside" format="boolean" />
+        <attr name="clockwise" format="boolean" />
+        <attr name="enabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SeekArcTheme">
+        <attr name="seekArcStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressForLearning">
+        <attr name="linesCount" format="integer"/>
+        <attr name="lineHeight" format="dimension"/>
+        <attr name="spaceLength" format="dimension"/>
+        <attr name="activeLine" format="reference" />
+        <attr name="inActiveLine" format="reference"/>
+        <attr name="learning_progress" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressForGrammer">
+        <attr name="starsCount" format="integer"/>
+        <attr name="starLineHeight" format="dimension"/>
+        <attr name="starSpaceLength" format="dimension"/>
+        <attr name="activeStar" format="reference" />
+        <attr name="inActiveStar" format="reference"/>
+        <attr name="star_learning_progress" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ChipForGrammar">
+        <attr name="chipSpaceLength" format="dimension"/>
+        <attr name="center" format="boolean"/>
+    </declare-styleable>
+</resources>

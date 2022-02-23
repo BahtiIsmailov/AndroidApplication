@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_for_grammar"
+    tools:context=".view.main.grammar.GrammarBeginTrainingFragment">
+
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Proxima15"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/questions"
+        android:textAlignment="center"
+        android:textColor="#80FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header"
+        style="@style/Proxima34Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:text="Прошедшее время was / were" />
+
+
+    <com.example.englishapp.view.customview.CreateChipForGrammarCustomView
+        android:id="@+id/createChip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:center="true"
+        app:layout_constraintEnd_toEndOf="@+id/header"
+        app:layout_constraintStart_toStartOf="@+id/header"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <com.example.englishapp.view.customview.ProgressForGrammarMainPageStar
+        android:id="@+id/progressBarStar"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        app:activeStar="@drawable/ic_star_yellow"
+        app:inActiveStar="@drawable/ic_star_for_grammar_training"
+        app:layout_constraintBottom_toTopOf="@+id/readRulls"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createChip"
+        app:layout_constraintVertical_bias="0.0"
+        app:starLineHeight="40dp" />
+
+    <com.example.englishapp.view.customview.WhitePushButtonView
+        android:id="@+id/readRulls"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="99dp"
+        android:text="@string/read_rull"
+        android:textAllCaps="false"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/training"
+        app:layout_constraintStart_toStartOf="@+id/training" />
+
+    <com.example.englishapp.view.customview.SimplePushButtonView
+        android:id="@+id/training"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/train"
+        android:textAllCaps="false"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

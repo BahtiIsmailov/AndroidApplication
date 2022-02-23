@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_for_grammar"
+    tools:context=".view.main.grammar.GrammarFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:lottie_autoPlay="true"
+        app:lottie_repeatCount="5"
+        android:layout_gravity="center"
+        app:lottie_rawRes="@raw/flag"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mainNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/testTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/static_word_grammar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/proxima_soft_bold"
+                android:text="@string/grammar1"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="48sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/static_words_grammar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_soft_medium"
+                android:text="Здесь можно потренировать правила\nи заработать звёзды"
+                android:textColor="#80FFFFFF"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/static_word_grammar"
+                app:layout_constraintTop_toBottomOf="@+id/static_word_grammar" />
+
+            <TextView
+                android:id="@+id/static_word_grammar_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/proxima_soft_bold"
+                android:text="Начальный уровень"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="@+id/static_words_grammar"
+                app:layout_constraintTop_toBottomOf="@+id/static_words_grammar" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="17dp"
+                android:overScrollMode="never"
+                tools:listitem="@layout/grammar_item"
+                android:nestedScrollingEnabled="true"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/static_word_grammar_level"
+                app:layout_constraintTop_toBottomOf="@+id/static_word_grammar_level" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</FrameLayout>

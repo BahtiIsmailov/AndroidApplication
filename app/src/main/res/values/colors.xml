@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="black5">#0D000000</color>
+    <color name="black10">#1A000000</color>
+    <color name="black30">#4D000000</color>
+    <color name="black40">#66000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="greeen">#D0F1D0</color>
+    <color name="greeen_10">#1A54C858</color>
+    <color name="greenBorder">#09EA11</color>
+    <color name="red">#F44336</color>
+    <color name="velvet">#655CCD</color>
+    <color name="blue">#2D81FF</color>
+    <color name="cian">#00C6A2</color>
+    <color name="green">#54C858</color>
+    <color name="light_blue_400">#FF29B6F6</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_600">#FF757575</color>
+    <color name="orange">#FFC107</color>
+    <color name="progress_gray">#FFD8D8D8</color>
+    <color name="progress_gray_dark">#FF383838</color>
+    <color name="default_blue_light">#ff33b5e5</color>
+    <color name= "yelowcolor">#34FFDF39</color>
+    <color name="login_divider_color">#E6E6E6</color>
+    <color name="white50">#80FFFFFF</color>
+    <color name="grammar">#F18881</color>
+    <color name="purple">#D400F8</color>
+    <color name="color_for_one_column">#4D040404</color>
+    <color name="color_for_background_card">#80040404</color>
+    <color name="black_for_grammar_begin_training">#39040404</color>
+</resources>

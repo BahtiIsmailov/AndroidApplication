@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/background">
+        <shape android:shape="rectangle" android:innerRadiusRatio="100">
+            <corners android:radius="10dp"/>
+            <solid android:color="#4B000000"/>
+            <corners android:radius="10dp"/>
+
+        </shape>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <gradient
+
+                    android:startColor="#FFEB39"
+                    android:centerColor="#FFB800"
+                    android:centerY="1.0"
+                    android:angle="270"
+                    />
+                <corners android:radius="100dp"/>
+            </shape>
+        </clip>
+    </item>
+
+
+    <item>
+        <rotate
+             android:pivotX="25%"
+            android:fromDegrees="90"
+            >
+            <shape
+                android:shape="line">
+                <stroke
+                    android:color="#ffffff"
+                    android:width="5dp"
+
+                    />
+            </shape>
+
+        </rotate>
+    </item>
+
+    <item>
+        <rotate
+            android:pivotX="50%"
+            android:fromDegrees="90">
+            <shape
+                android:shape="line">
+                <stroke
+                    android:color="#ffffff"
+                    android:width="5dp"
+                    />
+            </shape>
+        </rotate>
+    </item>
+    <item>
+        <rotate
+            android:pivotX="75%"
+            android:fromDegrees="90">
+            <shape
+                android:shape="line">
+                <stroke
+                    android:color="#ffffff"
+                    android:width="5dp"
+                    />
+            </shape>
+        </rotate>
+    </item>
+
+
+</layer-list>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/sky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_sky_2" />
+
+    <ImageView
+        android:id="@+id/cityForBackgroundCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:layout_alignTop="@+id/cityForBackground"
+         android:layout_marginTop="70dp"
+        android:src="@drawable/ic_back_background_city"
+        />
+
+    <ImageView
+        android:id="@+id/sun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/sky"
+        android:layout_marginTop="30dp"
+        android:layout_alignStart="@id/sky"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/ic_sun" />
+
+    <ImageView
+        android:id="@+id/cityForBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:layout_alignBottom="@id/sky"
+        android:src="@drawable/ic_city_for_afternoon" />
+
+    <ImageView
+        android:id="@+id/korabli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cityForBackground"
+        android:scaleType="matrix"
+        android:src="@drawable/ic_korabli" />
+
+    <ImageView
+        android:id="@+id/road"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:layout_alignBottom="@id/sky"
+        android:src="@drawable/ic_road" />
+
+    <ImageView
+        android:id="@+id/topTrees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:layout_alignBottom="@+id/sky"
+        android:src="@drawable/ic_trees" />
+
+    <ImageView
+        android:id="@+id/bottomTrees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/road"
+        android:scaleType="matrix"
+        android:src="@drawable/ic_bottom_trees" />
+
+
+
+
+</RelativeLayout>

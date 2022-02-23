@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.welcomefragment1.login.authsteps.welcome.inputnickname.InputNickNameFragment">
+
+    <ImageView
+        android:id="@+id/image_for_input_name"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="59dp"
+        android:src="@drawable/avatar1_base_max"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/create_nick_name"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="59dp"
+        android:background="@drawable/backgroun_for_input_nick_name"
+        android:gravity="center"
+        android:hint="Имя"
+        android:textAllCaps="false"
+        android:focusable="true"
+        
+        android:imeOptions="flagForceAscii"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_for_input_name" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_disable"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/button_disabled"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="28dp"
+        android:text="Продолжить"
+        android:textColor="#22000000"
+        app:layout_constraintTop_toBottomOf="@+id/create_nick_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <com.example.englishapp.view.customview.SimplePushButtonView
+        android:id="@+id/continueButton"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/continue12"
+        android:layout_marginBottom="28dp"
+        android:textAllCaps="false"
+        android:textSize="19sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/create_nick_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

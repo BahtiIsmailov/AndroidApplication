@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph"
+    app:startDestination="@id/baseWelcomeFragment">
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.englishapp.view.main.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_chooseProfileFragment"
+            app:destination="@id/chooseProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment1"
+        android:name="com.example.englishapp.view.welcomefragment1.WelcomeFragment1"
+        android:label="fragment_welcome1"
+        tools:layout="@layout/fragment_welcome1" >
+        <action
+            android:id="@+id/action_welcomeFragment1_to_authLoginFragment"
+            app:destination="@id/authLoginFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment1_to_createEmailAndPasswordFragment"
+            app:destination="@id/createEmailAndPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseProfileFragment"
+        android:name="com.example.englishapp.view.welcomefragment1.login.chooseprofile.ChooseProfileFragment"
+        android:label="fragment_choose_profile"
+        tools:layout="@layout/fragment_choose_profile" >
+        <argument
+            android:name="profiles"
+            app:argType="com.example.englishapp.model.data.ProfileResponse[]"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_chooseProfileFragment_to_baseWelcomeFragment"
+            app:destination="@id/baseWelcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/grammarFragment"
+        android:name="com.example.englishapp.view.main.grammar.GrammarFragment"
+        android:label="fragment_grammar"
+        tools:layout="@layout/fragment_grammar" >
+        <action
+            android:id="@+id/action_grammarFragment_to_fragmentGrammarItemDescription"
+            app:destination="@id/fragmentGrammarItemDescription" />
+        <action
+            android:id="@+id/action_grammarFragment_to_grammarTrainingFragment"
+            app:destination="@id/grammarTrainingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordsFragment"
+        android:name="com.example.englishapp.view.main.words.wordslist.WordsFragment"
+        android:label="fragment_words"
+        tools:layout="@layout/fragment_words" >
+        <action
+            android:id="@+id/action_wordsFragment_to_lookAllWordSetFragment"
+            app:destination="@id/lookAllWordSetFragment" />
+        <action
+            android:id="@+id/action_wordsFragment_to_wordsInWordSet"
+            app:destination="@id/WordsInWordSetFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/storyFragment"
+        android:name="com.example.englishapp.view.main.story.StoryFragment"
+        android:label="fragment_story"
+        tools:layout="@layout/fragment_story" />
+    <fragment
+        android:id="@+id/lookAllWordSetFragment"
+        android:name="com.example.englishapp.view.main.words.wordslist.LookAllWordSetFragment"
+        android:label="fragment_look_all_word_set"
+        tools:layout="@layout/fragment_look_all_word_set" >
+        <argument
+            android:name="wordGroup"
+            app:argType="com.example.englishapp.model.data.words.WordGroup" />
+        <action
+            android:id="@+id/action_lookAllWordSetFragment_to_wordsInWordSet"
+            app:destination="@id/WordsInWordSetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/WordsInWordSetFragment"
+        android:name="com.example.englishapp.view.main.words.wordsinwordset.wordspresenting.WordsInWordSetFragment"
+        android:label="WordsInWordSetFragment">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_WordsInWordSetFragment_to_fragmentLearningWords"
+            app:destination="@id/fragmentLearningWords" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLearningWords"
+        android:name="com.example.englishapp.view.main.words.wordsinwordset.learning.FragmentLearningWords"
+        android:label="fragment_learning_words"
+        tools:layout="@layout/fragment_learning_words" >
+        <argument
+            android:name="wordResponse"
+            app:argType="com.example.englishapp.model.data.words.WordsResponse" />
+        <action
+            android:id="@+id/action_fragmentLearningWords_to_fragmentTrainingWords"
+            app:destination="@id/fragmentTrainingWords"
+            app:popUpTo="@id/WordsInWordSetFragment" />
+        <action
+            android:id="@+id/action_fragmentLearningWords_to_WordsInWordSetFragment"
+            app:destination="@id/WordsInWordSetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTrainingWords"
+        android:name="com.example.englishapp.view.main.words.wordsinwordset.training.FragmentTrainingWords"
+        android:label="fragment_training_words"
+        tools:layout="@layout/fragment_training_words" >
+        <argument
+            android:name="words"
+            app:argType="com.example.englishapp.model.data.words.Word[]" />
+        <argument
+            android:name="wordSetId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_fragmentTrainingWords_to_fragmentEndTraining"
+            app:destination="@id/fragmentEndTraining" />
+        <action
+            android:id="@+id/action_fragmentTrainingWords_to_WordsInWordSetFragment"
+            app:destination="@id/WordsInWordSetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEndTraining"
+        android:name="com.example.englishapp.view.main.words.wordsinwordset.training.endtraining.FragmentEndTraining"
+        android:label="fragment_end_training"
+        tools:layout="@layout/fragment_end_training" >
+        <argument
+            android:name="endTrainingResult"
+            app:argType="com.example.englishapp.view.main.words.wordsinwordset.training.EndTrainingResult" />
+        <argument
+            android:name="trainedWords"
+            app:argType="com.example.englishapp.model.data.words.Word[]" />
+        <action
+            android:id="@+id/action_fragmentEndTraining_to_WordsInWordSetFragment"
+            app:destination="@id/WordsInWordSetFragment" />
+        <argument android:name="wordSetId"
+            app:argType="integer" />
+    </fragment><action android:id="@+id/action_global_wordsFragment" app:destination="@id/wordsFragment"/>
+    <fragment
+        android:id="@+id/fragmentGrammarItemDescription"
+        android:name="com.example.englishapp.view.main.grammar.grammaritemdescription.FragmentGrammarItemInfo"
+        android:label="fragment_grammar_item_description"
+        tools:layout="@layout/fragment_grammar_item_info" >
+        <argument
+            android:name="grammarItem"
+            app:argType="com.example.englishapp.model.data.grammar.GrammarMainData" />
+    </fragment>
+    <fragment
+        android:id="@+id/grammarTrainingFragment"
+        android:name="com.example.englishapp.view.main.grammar.training.GrammarTrainingFragment"
+        android:label="GrammarTrainingFragment" >
+        <argument android:name="grammarMainData"
+            app:argType="com.example.englishapp.model.data.grammar.GrammarMainData" />
+        <action
+            android:id="@+id/action_grammarTrainingFragment_to_pausedGrammarTrainingFragment"
+            app:destination="@id/pausedGrammarTrainingFragment"
+            app:popUpTo="@id/grammarTrainingFragment" />
+        <action
+            android:id="@+id/action_grammarTrainingFragment_to_manyErrorGrammarTrainingFragment"
+            app:destination="@id/manyErrorGrammarTrainingFragment"
+            app:popUpTo="@id/grammarTrainingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_grammarTrainingFragment_to_endGrammarTrainingFragment"
+            app:destination="@id/endGrammarTrainingFragment"
+            app:popUpTo="@id/grammarTrainingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/manyErrorGrammarTrainingFragment"
+        android:name="com.example.englishapp.view.main.grammar.manyerror.ManyErrorGrammarTrainingFragment"
+        android:label="fragment_many_error_grammar_training"
+        tools:layout="@layout/fragment_many_error_grammar_training" >
+        <argument
+            android:name="grammarMainData"
+            app:argType="com.example.englishapp.model.data.grammar.GrammarMainData" />
+    </fragment>
+    <fragment
+        android:id="@+id/pausedGrammarTrainingFragment"
+        android:name="com.example.englishapp.view.main.grammar.paused.PausedGrammarTrainingFragment"
+        android:label="fragment_paused_grammar_training"
+        tools:layout="@layout/fragment_paused_grammar_training" >
+        <argument
+            android:name="grammarMainData"
+            app:argType="com.example.englishapp.model.data.grammar.GrammarMainData" />
+    </fragment>
+    <action android:id="@+id/action_global_fragmentGrammarItemDescription" app:destination="@id/fragmentGrammarItemDescription" />
+    <fragment
+        android:id="@+id/endGrammarTrainingFragment"
+        android:name="com.example.englishapp.view.main.grammar.endtraining.EndGrammarTrainingFragment"
+        android:label="fragment_end_grammar_training"
+        tools:layout="@layout/fragment_end_grammar_training" >
+        <argument
+            android:name="grammarMainData"
+            app:argType="com.example.englishapp.model.data.grammar.GrammarMainData" />
+        <argument
+            android:name="points"
+            app:argType="long" />
+        <argument
+            android:name="stars"
+            app:argType="integer" />
+        <argument
+            android:name="gameId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_endGrammarTrainingFragment_to_getStatisticFromOtherPerson"
+            app:destination="@id/getStatisticFromOtherPerson" />
+    </fragment>
+    <dialog
+        android:id="@+id/getStatisticFromOtherPerson"
+        android:name="com.example.englishapp.view.main.grammar.endtraining.GetStatisticFromOtherPerson"
+        android:label="fragment_get_statistic_from_other_person"
+        tools:layout="@layout/fragment_get_statistic_from_other_person" >
+        <argument
+            android:name="grammarMainData"
+            app:argType="com.example.englishapp.model.data.grammar.GrammarMainData" />
+    </dialog>
+    <fragment
+        android:id="@+id/forgetPasswordFromAuth"
+        android:name="com.example.englishapp.view.welcomefragment1.login.forgetpassword.ForgetPasswordFromAuth"
+        android:label="fragment_forget_password_from_auth"
+        tools:layout="@layout/fragment_forget_password_from_auth" />
+    <fragment
+        android:id="@+id/authLoginFragment"
+        android:name="com.example.englishapp.view.welcomefragment1.login.AuthLoginFragment"
+        android:label="fragment_auth_login"
+        tools:layout="@layout/fragment_auth_login" >
+        <action
+            android:id="@+id/action_authLoginFragment_to_forgetPasswordFromAuth"
+            app:destination="@id/forgetPasswordFromAuth" />
+        <action
+            android:id="@+id/action_authLoginFragment_to_chooseProfileFragment"
+            app:destination="@id/chooseProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createEmailAndPasswordFragment"
+        android:name="com.example.englishapp.view.welcomefragment1.login.authsteps.CreateEmailAndPasswordFragment"
+        android:label="CreateEmailAndPasswordFragment" >
+        <action
+            android:id="@+id/action_createEmailAndPasswordFragment_to_chooseProfileFragment"
+            app:destination="@id/chooseProfileFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_authLoginFragment"
+        app:destination="@id/authLoginFragment"
+        app:popUpTo="@id/chooseProfileFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_welcomeFragment12"
+        app:destination="@id/welcomeFragment1"
+        app:popUpTo="@id/authLoginFragment"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/baseWelcomeFragment"
+        android:name="com.example.englishapp.view.welcomefragment1.login.authsteps.welcome.BaseWelcomeFragment"
+        android:label="fragment_base_welcome"
+        tools:layout="@layout/fragment_base_welcome" />
+
+</navigation>

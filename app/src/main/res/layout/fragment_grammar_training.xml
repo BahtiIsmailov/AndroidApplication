@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/begin_training"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.main.words.wordsinwordset.training.FragmentTrainingWords">
+
+    <include
+        android:id="@+id/imageViewForNight"
+        layout="@layout/city_for_parallaks_night"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomViewContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/imageView"
+        layout="@layout/city_for_parallaks_afternoon"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomViewContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/motociklist"
+        layout="@layout/motociklist_grammar_training"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewForNight"
+        app:layout_constraintEnd_toStartOf="@+id/in_game_star"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/in_game_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewForNight"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewForNight"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/in_game_star"
+        app:lottie_repeatCount="500" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stopTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/stop1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_stop_grammar_training"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/currentCountTraining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/proxima_soft_bold"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/stop1"
+            app:layout_constraintStart_toEndOf="@+id/stop1"
+            app:layout_constraintTop_toTopOf="@+id/stop1" />
+
+        <TextView
+            android:id="@+id/slash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:fontFamily="@font/proxima_soft_bold"
+            android:text="/"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/currentCountTraining"
+            app:layout_constraintStart_toEndOf="@+id/currentCountTraining"
+            app:layout_constraintTop_toTopOf="@+id/currentCountTraining" />
+
+        <TextView
+            android:id="@+id/allCountTraining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:fontFamily="@font/proxima_soft_bold"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintStart_toEndOf="@+id/slash"
+            app:layout_constraintTop_toTopOf="@+id/currentCountTraining" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llHeart"
+        android:layout_width="68dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="@id/stopTraining"
+        app:layout_constraintTop_toBottomOf="@id/stopTraining">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHeart1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_heart" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHeart2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_heart"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHeart3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_heart" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progressBarStar"
+        android:layout_width="66dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintEnd_toEndOf="@+id/points"
+        app:layout_constraintTop_toBottomOf="@+id/points">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivStar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_for_grammar_training" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivStar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_for_grammar_training"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivStar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_for_grammar_training" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="17dp"
+        android:fontFamily="@font/proxima_soft_bold"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_rawRes="@raw/flag"
+        app:lottie_repeatCount="5"
+        tools:visibility="visible" />
+
+
+    <FrameLayout
+        android:id="@+id/bottomViewContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/change_background_bottom_view_container_grammar_training"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

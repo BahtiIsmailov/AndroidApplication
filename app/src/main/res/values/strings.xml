@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">EnglishApp</string>
+    <string name="server_error" translatable="false">Server error, try again later</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="native_language" translatable="false">какой твой\nродной язык?</string>
+    <string name="let_me_speak" translatable="false">Добро пожаловать\nв мир Let Me Speak</string>
+    <string name="some_text" translatable="false">  С нами ты начнёшь говорить    \nна английском языке уже сегодня</string>
+    <string name="log_in" translatable="false">Login</string>
+    <string name="sign_in" translatable="false">Sign in</string>
+    <string name="login" translatable="false">Email</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="account_not_found" translatable="false">Неправильный email или пароль</string>
+    <string name="next">У меня уже есть аккаунт</string>
+    <string name="new_user">Я новый пользователь</string>
+    <string name="choose" translatable="false">Выбор персонажа</string>
+    <string name="n_nmarket_letmespeak_org" translatable="false">У вас нет доступных персонажей.\nМожете приобрести одного из них на \nmarket.letmespeak.org</string>
+    <string name="skills" translatable="false">Skills</string>
+    <string name="vocabulary" translatable="false">Vocabulary</string>
+    <string name="pronunciation" translatable="false">Pronunciation</string>
+    <string name="grammar" translatable="false">Grammar</string>
+    <string name="learning_speed" translatable="false">learning speed</string>
+    <string name="rewards" translatable="false">rewards</string>
+    <string name="talent" translatable="false">talent</string>
+    <string name="story" translatable="false">Story</string>
+    <string name="words" translatable="false">Words</string>
+    <string name="profile" translatable="false">Profile</string>
+    <string name="start_button">Start</string>
+    <string name="visa">VISA</string>
+    <string name="look_all"><![CDATA[См. все]]></string>
+    <string name="btn_continue">Continue</string>
+    <string name="last_words_count">%s of %s words</string>
+    <string name="words_count">%s words</string>
+    <string name="travels">Travels</string>
+    <string name="level_1">Базовый уровень</string>
+    <string name="level_2">Средний уровень</string>
+    <string name="level_3">Продвинутый уровень</string>
+    <string name="word_choosed">Слова выбраны</string>
+    <string name="training_repeat_word">Повтори слово</string>
+    <string name="training_remember">Запомнил</string>
+    <string name="sayWordInEnglish">Скажи слово на английском</string>
+    <string name="cant_speak_now">Не могу говорить сейчас</string>
+    <string name="words_trained">Слова\nпотренированы</string>
+    <string name="more_training">Тренировать ещё</string>
+    <string name="lms_n">По методологии LMS слова нужно\nповторить через 8 ч</string>
+    <string name="redy">Готово</string>
+    <string name="recomendatin">Рекомендуем закончить тренировку и потренировать эти слова позже.</string>
+    <string name="many_error">Много попыток за одну тренировку</string>
+    <string name="continue1">Продолжить попытки</string>
+    <string name="end_training">Закончить тренировку</string>
+    <string name="learnlms">Учи новые слова и повторяй их по особому расписанию. Благодаря методу LMS ты легко вспомнишь новые слова в нужный момент.</string>
+    <string name="go_to_wordset">"К списку наборов"</string>
+    <string name="grammar1">Грамматика</string>
+    <string name="training_rules">Тренировать правила</string>
+    <string name="read_rull">Читать правило</string>
+    <string name="train">Тренировать</string>
+
+    <string name="trainagain1">Тренировать ещё раз</string>
+    <string name="right">правильно</string>
+    <string name="manyerror">Слишком много ошибок</string>
+    <string name="returnrules">Повтори правило и пройди тренировку ещё раз</string>
+    <string name="readrules">Читать правила</string>
+    <string name="tryagain">Начать сначала</string>
+    <string name="lookRules">Смотреть правило</string>
+    <string name="exit">Выйти</string>
+
+    <string name="music">Музыка</string>
+    <string name="song">Звуки</string>
+    <string name="rebus_construct_word_title">Собери слово</string>
+    <string name="learning_words_choose">Слова выбраны</string>
+    <string name="place">место \nв рэтинге</string>
+    <string name="reitning_is_not_available">Рейтинг не доступен</string>
+    <string name="reiting">Рейтинг</string>
+    <string name="questions">Вопросы</string>
+    <string name="continue12">Продолжить</string>
+    <plurals name="word_set_left_count">
+        <item quantity="one">Yet\n%s word set</item>
+        <item quantity="other">Yet\n%s word sets</item>
+    </plurals>
+
+    <plurals name="word_sets_count">
+        <item quantity="one">%s word set</item>
+        <item quantity="other">%s word sets</item>
+    </plurals>
+
+    <plurals name="all_words_trained">
+        <item quantity="one">All %s word trained!</item>
+        <item quantity="other">All %s words trained!</item>
+    </plurals>
+    <plurals name="days_left">
+        <item quantity="one">%s day left</item>
+        <item quantity="other">%s days left</item>
+    </plurals>
+</resources>

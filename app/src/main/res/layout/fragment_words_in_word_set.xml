@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:scrimAnimationDuration="100"
+            app:toolbarId="@+id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/mainTeamTV"
+                    style="@style/Proxima15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="237dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toTopOf="@+id/subTeam"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Транспорт" />
+
+                <TextView
+                    android:id="@+id/subTeam"
+                    style="@style/Proxima34Bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="Собеседование" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/white"
+                android:elevation="0dp"
+                app:layout_collapseMode="pin" />
+
+            <com.example.englishapp.view.customview.TrainingCollageView
+                android:id="@+id/mainTopFoto"
+                android:layout_width="match_parent"
+                android:layout_height="209dp">
+
+            </com.example.englishapp.view.customview.TrainingCollageView>
+
+            <FrameLayout
+                android:id="@+id/flBack"
+                android:layout_width="40dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:foregroundGravity="center"
+                app:layout_collapseMode="pin">
+
+                <ImageView
+                    android:id="@+id/ivBackBgShadow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_back_btn_shadow"
+                    android:foregroundGravity="center" />
+
+                <ImageView
+                    android:id="@+id/ivBackBg"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_back_btn"
+                    android:foregroundGravity="center" />
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    app:tint="@color/black" />
+
+                <View
+                    android:id="@+id/backClickView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_round_ripple" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvToolbar"
+                style="@style/Proxima15SemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:elevation="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_collapseMode="pin"
+                tools:text="Собеседование" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.main.words.wordsinwordset.wordspresenting.WordsInWordSetFragment">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/progressContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.warkiz.widget.IndicatorStayLayout
+                    android:id="@+id/seekBarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <!--your layout-->
+
+                    <com.warkiz.widget.IndicatorSeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:focusable="false"
+                        android:paddingBottom="2dp"
+                        android:visibility="visible"
+                        app:isb_indicator_content_layout="@layout/seek_bar_layout"
+                        app:isb_max="100"
+                        app:isb_progress="50"
+                        app:isb_show_indicator="custom"
+                        app:isb_track_background_color="@color/black5"
+                        app:isb_track_background_size="8dp"
+                        app:isb_track_progress_color="@color/green"
+                        app:isb_track_progress_size="8dp"
+                        app:isb_track_rounded_corners="true" />
+                    <!--your layout-->
+                </com.warkiz.widget.IndicatorStayLayout>
+
+                <ImageView
+                    android:id="@+id/ivStart1"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="22dp"
+                    android:src="@drawable/ic_star_selected"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvStar1"
+                    style="@style/Proxima10Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5%"
+                    android:textColor="@color/black30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/ivStart1"
+                    app:layout_constraintStart_toStartOf="@+id/ivStart1"
+                    app:layout_constraintTop_toBottomOf="@+id/ivStart1" />
+
+                <TextView
+                    android:id="@+id/tvStar2"
+                    style="@style/Proxima10Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50%"
+                    android:textColor="@color/black30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/ivStart2"
+                    app:layout_constraintStart_toStartOf="@+id/ivStart2"
+                    app:layout_constraintTop_toBottomOf="@+id/ivStart2" />
+
+                <TextView
+                    android:id="@+id/tvStar3"
+                    style="@style/Proxima10Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100%"
+                    android:textColor="@color/black30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/ivStart3"
+                    app:layout_constraintStart_toStartOf="@+id/ivStart3"
+                    app:layout_constraintTop_toBottomOf="@+id/ivStart3" />
+
+                <ImageView
+                    android:id="@+id/ivStart2"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="22dp"
+                    android:src="@drawable/ic_star_selected"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivStart3"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_star_selected"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressContainer" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:lottie_repeatCount="5"
+        android:layout_gravity="center"
+        app:lottie_rawRes="@raw/flag" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/background_gradient_white_to_transparent"
+        android:visibility="visible">
+
+    </FrameLayout>
+
+    <com.example.englishapp.view.customview.SimplePushButtonView
+        android:id="@+id/trainingButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="28dp"
+        android:text="Тренировать"
+        android:textAllCaps="false"
+        android:visibility="visible" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

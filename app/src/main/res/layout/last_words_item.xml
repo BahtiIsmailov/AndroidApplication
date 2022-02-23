@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/Proxima48Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:includeFontPadding="false"
+        android:text="@string/words"
+        android:textColor="@color/white" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lastWordCard"
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        app:cardBackgroundColor="#6361E9"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivWordsBackground"
+                android:layout_width="116dp"
+                android:layout_height="116dp"
+                android:src="@drawable/ic_words_picture_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tvLastWordsHeader"
+                style="@style/Proxima15SemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:alpha="0.5"
+                android:includeFontPadding="false"
+                android:textColor="@color/white50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Путешествия" />
+
+            <TextView
+                android:id="@+id/tvLastWordsTitle"
+                style="@style/Proxima25Bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="32dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLastWordsHeader"
+                tools:text="Фрукты и овощи Фрукты и овощи Фрукты и овощи Фрукты и овощи" />
+
+            <ProgressBar
+                android:id="@+id/levelProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="104dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="9dp"
+                android:max="100"
+                android:progress="55"
+                android:progressDrawable="@drawable/words_progressbar_item_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLastWordsTitle" />
+
+            <TextView
+                android:id="@+id/tvLastWordProgress"
+                style="@style/Proxima15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="7dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/white50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/levelProgressBar"
+                tools:text="8 из 40 слов" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/StarRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:numStars="3"
+                android:rating="1"
+                app:layout_constraintBottom_toBottomOf="@+id/levelProgressBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/levelProgressBar"
+                app:layout_constraintTop_toTopOf="@+id/levelProgressBar" />
+
+            <com.example.englishapp.view.customview.SimplePushButtonView
+                android:id="@+id/btnContinue"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="25dp"
+                android:fontFamily="@font/proxima_soft_bold"
+                android:gravity="center"
+                android:text="@string/btn_continue"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLastWordProgress" />
+
+            <ImageView
+                android:id="@+id/ivPicture"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:src="@drawable/ic_active_grammar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

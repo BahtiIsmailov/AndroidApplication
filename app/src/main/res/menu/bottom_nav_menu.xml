@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/storyFragment"
+        android:icon="@drawable/ic_passive_dialogues"
+        android:title="@string/story" />
+    <item
+        android:id="@+id/wordsFragment"
+        android:icon="@drawable/ic_passive_word"
+        android:title="@string/words" />
+    <item
+        android:id="@+id/grammarFragment"
+        android:icon="@drawable/ic_passive_grammer"
+        android:title="@string/grammar" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_passive_profile"
+        android:title="@string/profile" />
+</menu>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:seekarc="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="8dp">
+
+    <ImageView
+        android:id="@+id/audio"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_voice" />
+
+    <TextView
+        android:id="@+id/translationWordTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/originalWordTV"
+        app:layout_constraintEnd_toStartOf="@+id/seekArc1"
+        app:layout_constraintStart_toEndOf="@+id/audio"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/originalWordTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/seekArc1"
+        app:layout_constraintStart_toEndOf="@+id/audio"
+        app:layout_constraintTop_toBottomOf="@+id/translationWordTv" />
+
+    <com.example.englishapp.view.customview.ArcProgressBar
+        android:id="@+id/seekArc1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:padding="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/goTV"
+        style="@style/Proxima9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go"
+        android:textColor="@color/green"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/seekArc1"
+        app:layout_constraintEnd_toEndOf="@+id/seekArc1"
+        app:layout_constraintStart_toStartOf="@+id/seekArc1"
+        app:layout_constraintTop_toTopOf="@+id/seekArc1"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvLeftHours"
+        style="@style/Proxima9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/seekArc1"
+        app:layout_constraintEnd_toEndOf="@+id/seekArc1"
+        app:layout_constraintStart_toStartOf="@+id/seekArc1"
+        app:layout_constraintTop_toTopOf="@+id/seekArc1"
+        tools:text="8ч"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/iv_done"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:background="@drawable/background_rounded_green"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/seekArc1"
+        app:layout_constraintEnd_toEndOf="@+id/seekArc1"
+        app:layout_constraintStart_toStartOf="@+id/seekArc1"
+        app:layout_constraintTop_toTopOf="@+id/seekArc1"
+        seekarc:srcCompat="@drawable/ic_check_mark"
+        tools:visibility="gone" />
+
+    <View
+        android:id="@+id/tooltipAnchor"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/seekArc1"
+        app:layout_constraintEnd_toEndOf="@+id/seekArc1"
+        app:layout_constraintStart_toStartOf="@+id/seekArc1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
