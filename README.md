@@ -17,7 +17,7 @@ Stack:
 - Data Binding
 - Animation
 - Room
-- Dagger2
+- Hilt
 - Review of pool requests;
 - Network protocols HTTP/RESTFULL APIs
 - MVVM template architecture
